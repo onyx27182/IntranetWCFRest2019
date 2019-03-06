@@ -1,0 +1,7 @@
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\bin\Release\ConsoleApp1.exe.config
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\bin\Release\ConsoleApp1.exe
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\bin\Release\ConsoleApp1.pdb
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\obj\Release\ConsoleApp1.csprojAssemblyReference.cache
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\obj\Release\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\obj\Release\ConsoleApp1.exe
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\obj\Release\ConsoleApp1.pdb

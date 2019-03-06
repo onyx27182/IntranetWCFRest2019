@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SytechDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Idea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FK_People_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="person" Relationship="Self.FK_Ideas_people" FromRole="Ideas" ToRole="people" />
+  </EntityType>
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ideas" Relationship="Self.FK_Ideas_people" FromRole="people" ToRole="Ideas" />
+  </EntityType>
+  <Association Name="FK_Ideas_people">
+    <End Role="people" Type="Self.person" Multiplicity="1" />
+    <End Role="Ideas" Type="Self.Idea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="people">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ideas">
+        <PropertyRef Name="FK_People_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SytechDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ideas" EntityType="Self.Idea" />
+    <EntitySet Name="people" EntityType="Self.person" />
+    <AssociationSet Name="FK_Ideas_people" Association="Self.FK_Ideas_people">
+      <End Role="people" EntitySet="people" />
+      <End Role="Ideas" EntitySet="Ideas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

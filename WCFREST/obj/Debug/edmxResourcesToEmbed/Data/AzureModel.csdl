@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sytechDevelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="sytechDevelEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ideas" EntityType="sytechDevelModel.Idea" />
+    <EntitySet Name="people" EntityType="sytechDevelModel.person" />
+    <AssociationSet Name="FK_Ideas_people" Association="sytechDevelModel.FK_Ideas_people">
+      <End Role="person" EntitySet="people" />
+      <End Role="Idea" EntitySet="Ideas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Idea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FK_People_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="person" Relationship="sytechDevelModel.FK_Ideas_people" FromRole="Idea" ToRole="person" />
+  </EntityType>
+  <EntityType Name="person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ideas" Relationship="sytechDevelModel.FK_Ideas_people" FromRole="person" ToRole="Idea" />
+  </EntityType>
+  <Association Name="FK_Ideas_people">
+    <End Type="sytechDevelModel.person" Role="person" Multiplicity="1" />
+    <End Type="sytechDevelModel.Idea" Role="Idea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Idea">
+        <PropertyRef Name="FK_People_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ea0fd77-ed1c-44e4-819e-f5648fe5e6d1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4007/SytechService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SytechService.wsdl" MetadataType="Wsdl" ID="5cdce17d-176d-4d45-81bd-d771153acce4" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?wsdl" />
+    <MetadataFile FileName="SytechService.xsd" MetadataType="Schema" ID="2e89cccc-65bc-4043-92d1-88f6ff5aca14" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SytechService1.xsd" MetadataType="Schema" ID="9fdff46c-e3e1-4803-84af-050a985fbc28" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SytechService2.xsd" MetadataType="Schema" ID="b06718cf-fa4d-4505-a9ab-202f72f61332" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SytechService.disco" MetadataType="Disco" ID="70672606-2940-4909-9d06-cc8cfdab6c97" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?disco" />
+    <MetadataFile FileName="SytechService3.xsd" MetadataType="Schema" ID="1f559a37-1bc9-45ed-9883-556a9e3985e4" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,11 @@
+C:\Work\SytechWebAPI\WCFREST\WCFREST\bin\WCFREST.dll.config
+C:\Work\SytechWebAPI\WCFREST\WCFREST\bin\WCFREST.dll
+C:\Work\SytechWebAPI\WCFREST\WCFREST\bin\WCFREST.pdb
+C:\Work\SytechWebAPI\WCFREST\WCFREST\obj\Debug\WCFREST.csproj.CoreCompileInputs.cache
+C:\Work\SytechWebAPI\WCFREST\WCFREST\obj\Debug\WCFREST.dll
+C:\Work\SytechWebAPI\WCFREST\WCFREST\obj\Debug\WCFREST.pdb
+C:\Work\SytechWebAPI\WCFREST\WCFREST\bin\EntityFramework.dll
+C:\Work\SytechWebAPI\WCFREST\WCFREST\bin\EntityFramework.SqlServer.dll
+C:\Work\SytechWebAPI\WCFREST\WCFREST\bin\EntityFramework.xml
+C:\Work\SytechWebAPI\WCFREST\WCFREST\bin\EntityFramework.SqlServer.xml
+C:\Work\SytechWebAPI\WCFREST\WCFREST\obj\Debug\WCFREST.csproj.CopyComplete

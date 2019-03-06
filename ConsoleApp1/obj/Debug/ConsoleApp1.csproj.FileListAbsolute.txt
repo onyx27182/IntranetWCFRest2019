@@ -1,0 +1,6 @@
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Work\SytechWebAPI\WCFREST\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ae4bc928-0d56-4837-94b0-7f170220f68f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://empoweredai.com/SytechService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SytechService.xsd" MetadataType="Schema" ID="71bb6bb4-f85b-4939-b0ad-9662c492ca55" SourceId="1" SourceUrl="http://empoweredai.com/SytechService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SytechService.wsdl" MetadataType="Wsdl" ID="4643abce-536d-466a-9625-a804e7da54b6" SourceId="1" SourceUrl="http://empoweredai.com/SytechService.svc?wsdl" />
+    <MetadataFile FileName="SytechService1.xsd" MetadataType="Schema" ID="8c53b6b7-c341-4515-bbdf-b73a06ffcc51" SourceId="1" SourceUrl="http://empoweredai.com/SytechService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SytechService1.wsdl" MetadataType="Wsdl" ID="bbaa5a17-b5b4-4770-ba76-e87c42fbbce3" SourceId="1" SourceUrl="http://empoweredai.com/SytechService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SytechService.disco" MetadataType="Disco" ID="b9b043b1-3a68-4b70-b99a-9632e3f5d349" SourceId="1" SourceUrl="http://empoweredai.com/SytechService.svc?disco" />
+    <MetadataFile FileName="SytechService2.xsd" MetadataType="Schema" ID="102c6091-5bff-448e-8e5b-dc5d0f0c8917" SourceId="1" SourceUrl="http://empoweredai.com/SytechService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
