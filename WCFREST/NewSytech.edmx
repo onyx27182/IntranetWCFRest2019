@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DB_125405_joeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DB_125405_joeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ideas">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Text" Type="varchar(max)" />
-          <Property Name="FK_People_Id" Type="int" Nullable="false" />
+          <Property Name="FK_People_Id" Type="int" />
         </EntityType>
         <EntityType Name="people">
           <Key>
@@ -22,7 +22,7 @@
           <Property Name="LastName" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Ideas_people">
-          <End Role="people" Type="Self.people" Multiplicity="1" />
+          <End Role="people" Type="Self.people" Multiplicity="0..1" />
           <End Role="Ideas" Type="Self.Ideas" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="people">
@@ -41,49 +41,48 @@
             <End Role="Ideas" EntitySet="Ideas" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_125405_joeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DB_125405_joeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Ideas" EntityType="DB_125405_joeModel.Idea" />
+          <EntitySet Name="people" EntityType="DB_125405_joeModel.person" />
+          <AssociationSet Name="FK_Ideas_people" Association="DB_125405_joeModel.FK_Ideas_people">
+            <End Role="person" EntitySet="people" />
+            <End Role="Idea" EntitySet="Ideas" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Idea">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="FK_People_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="person" Relationship="Self.FK_Ideas_people" FromRole="Ideas" ToRole="people" />
+          <Property Name="FK_People_Id" Type="Int32" />
+          <NavigationProperty Name="person" Relationship="DB_125405_joeModel.FK_Ideas_people" FromRole="Idea" ToRole="person" />
         </EntityType>
         <EntityType Name="person">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Ideas" Relationship="Self.FK_Ideas_people" FromRole="people" ToRole="Ideas" />
+          <NavigationProperty Name="Ideas" Relationship="DB_125405_joeModel.FK_Ideas_people" FromRole="person" ToRole="Idea" />
         </EntityType>
         <Association Name="FK_Ideas_people">
-          <End Role="people" Type="Self.person" Multiplicity="1" />
-          <End Role="Ideas" Type="Self.Idea" Multiplicity="*" />
+          <End Type="DB_125405_joeModel.person" Role="person" Multiplicity="0..1" />
+          <End Type="DB_125405_joeModel.Idea" Role="Idea" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="people">
+            <Principal Role="person">
               <PropertyRef Name="Id" />
             </Principal>
-            <Dependent Role="Ideas">
+            <Dependent Role="Idea">
               <PropertyRef Name="FK_People_Id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DB_125405_joeEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Ideas" EntityType="Self.Idea" />
-          <EntitySet Name="people" EntityType="Self.person" />
-          <AssociationSet Name="FK_Ideas_people" Association="Self.FK_Ideas_people">
-            <End Role="people" EntitySet="people" />
-            <End Role="Ideas" EntitySet="Ideas" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -93,18 +92,18 @@
           <EntitySetMapping Name="Ideas">
             <EntityTypeMapping TypeName="DB_125405_joeModel.Idea">
               <MappingFragment StoreEntitySet="Ideas">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Text" ColumnName="Text" />
                 <ScalarProperty Name="FK_People_Id" ColumnName="FK_People_Id" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="people">
             <EntityTypeMapping TypeName="DB_125405_joeModel.person">
               <MappingFragment StoreEntitySet="people">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

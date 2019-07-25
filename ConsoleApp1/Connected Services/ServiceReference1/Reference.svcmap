@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7ea0fd77-ed1c-44e4-819e-f5648fe5e6d1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7d3d36c5-91cc-44e8-9882-7bcff8ce86f8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,15 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:4007/SytechService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost/WCFREST/SytechService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SytechService.wsdl" MetadataType="Wsdl" ID="5cdce17d-176d-4d45-81bd-d771153acce4" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?wsdl" />
-    <MetadataFile FileName="SytechService.xsd" MetadataType="Schema" ID="2e89cccc-65bc-4043-92d1-88f6ff5aca14" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd2" />
-    <MetadataFile FileName="SytechService1.xsd" MetadataType="Schema" ID="9fdff46c-e3e1-4803-84af-050a985fbc28" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd0" />
-    <MetadataFile FileName="SytechService2.xsd" MetadataType="Schema" ID="b06718cf-fa4d-4505-a9ab-202f72f61332" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd1" />
-    <MetadataFile FileName="SytechService.disco" MetadataType="Disco" ID="70672606-2940-4909-9d06-cc8cfdab6c97" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?disco" />
-    <MetadataFile FileName="SytechService3.xsd" MetadataType="Schema" ID="1f559a37-1bc9-45ed-9883-556a9e3985e4" SourceId="1" SourceUrl="http://localhost:4007/SytechService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SytechService.wsdl" MetadataType="Wsdl" ID="31cb372a-3835-4d2a-840b-7134328f84bf" SourceId="1" SourceUrl="http://localhost/WCFREST/SytechService.svc?wsdl" />
+    <MetadataFile FileName="SytechService1.wsdl" MetadataType="Wsdl" ID="a9321f5e-3631-4483-bb1f-1675eef6c154" SourceId="1" SourceUrl="http://localhost/WCFREST/SytechService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SytechService.xsd" MetadataType="Schema" ID="761d63c3-7264-47aa-a518-f2a2967a56ce" SourceId="1" SourceUrl="http://localhost/WCFREST/SytechService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SytechService1.xsd" MetadataType="Schema" ID="f269ab8f-7700-45fe-a8f7-ff1cde1a5db8" SourceId="1" SourceUrl="http://localhost/WCFREST/SytechService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SytechService2.xsd" MetadataType="Schema" ID="f14d94aa-b210-4bdc-9f04-5bedcf2d293f" SourceId="1" SourceUrl="http://localhost/WCFREST/SytechService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SytechService.disco" MetadataType="Disco" ID="a2d0fb7a-1fe9-467c-9c3e-780142d5a632" SourceId="1" SourceUrl="http://localhost/WCFREST/SytechService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

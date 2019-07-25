@@ -16,7 +16,7 @@ namespace WCFREST
     {
         public int Id { get; set; }
         public string Text { get; set; }
-        public int FK_People_Id { get; set; }
+        public Nullable<int> FK_People_Id { get; set; }
     
         public virtual person person { get; set; }
     }

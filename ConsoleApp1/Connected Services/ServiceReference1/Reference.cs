@@ -15,83 +15,6 @@ namespace ConsoleApp1.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IdeaPOCO", Namespace="http://schemas.datacontract.org/2004/07/")]
-    [System.SerializableAttribute()]
-    public partial class IdeaPOCO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string IdeaTextField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int NameIdField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IdeaText {
-            get {
-                return this.IdeaTextField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.IdeaTextField, value) != true)) {
-                    this.IdeaTextField = value;
-                    this.RaisePropertyChanged("IdeaText");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name {
-            get {
-                return this.NameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NameField, value) != true)) {
-                    this.NameField = value;
-                    this.RaisePropertyChanged("Name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int NameId {
-            get {
-                return this.NameIdField;
-            }
-            set {
-                if ((this.NameIdField.Equals(value) != true)) {
-                    this.NameIdField = value;
-                    this.RaisePropertyChanged("NameId");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PeoplePOCO", Namespace="http://schemas.datacontract.org/2004/07/WCFREST")]
     [System.SerializableAttribute()]
     public partial class PeoplePOCO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -151,70 +74,125 @@ namespace ConsoleApp1.ServiceReference1 {
         }
     }
     
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.ISytech")]
-    public interface ISytech {
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="IdeaPOCO", Namespace="http://schemas.datacontract.org/2004/07/WCFREST")]
+    [System.SerializableAttribute()]
+    public partial class IdeaPOCO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISytech/GetIdeas", ReplyAction="http://tempuri.org/ISytech/GetIdeasResponse")]
-        ConsoleApp1.ServiceReference1.IdeaPOCO[] GetIdeas();
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISytech/GetIdeas", ReplyAction="http://tempuri.org/ISytech/GetIdeasResponse")]
-        System.Threading.Tasks.Task<ConsoleApp1.ServiceReference1.IdeaPOCO[]> GetIdeasAsync();
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISytech/SaveIdea", ReplyAction="http://tempuri.org/ISytech/SaveIdeaResponse")]
-        void SaveIdea(string ideaText, string personId);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISytech/SaveIdea", ReplyAction="http://tempuri.org/ISytech/SaveIdeaResponse")]
-        System.Threading.Tasks.Task SaveIdeaAsync(string ideaText, string personId);
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TextField;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISytech/GetPeople", ReplyAction="http://tempuri.org/ISytech/GetPeopleResponse")]
-        ConsoleApp1.ServiceReference1.PeoplePOCO[] GetPeople();
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ISytech/GetPeople", ReplyAction="http://tempuri.org/ISytech/GetPeopleResponse")]
-        System.Threading.Tasks.Task<ConsoleApp1.ServiceReference1.PeoplePOCO[]> GetPeopleAsync();
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Text {
+            get {
+                return this.TextField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TextField, value) != true)) {
+                    this.TextField = value;
+                    this.RaisePropertyChanged("Text");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISytechChannel : ConsoleApp1.ServiceReference1.ISytech, System.ServiceModel.IClientChannel {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="", ConfigurationName="ServiceReference1.SytechService")]
+    public interface SytechService {
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:SytechService/GetPeople", ReplyAction="urn:SytechService/GetPeopleResponse")]
+        ConsoleApp1.ServiceReference1.PeoplePOCO[] GetPeople();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:SytechService/GetPeople", ReplyAction="urn:SytechService/GetPeopleResponse")]
+        System.Threading.Tasks.Task<ConsoleApp1.ServiceReference1.PeoplePOCO[]> GetPeopleAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:SytechService/GetIdeas", ReplyAction="urn:SytechService/GetIdeasResponse")]
+        ConsoleApp1.ServiceReference1.IdeaPOCO[] GetIdeas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:SytechService/GetIdeas", ReplyAction="urn:SytechService/GetIdeasResponse")]
+        System.Threading.Tasks.Task<ConsoleApp1.ServiceReference1.IdeaPOCO[]> GetIdeasAsync();
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface SytechServiceChannel : ConsoleApp1.ServiceReference1.SytechService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SytechClient : System.ServiceModel.ClientBase<ConsoleApp1.ServiceReference1.ISytech>, ConsoleApp1.ServiceReference1.ISytech {
+    public partial class SytechServiceClient : System.ServiceModel.ClientBase<ConsoleApp1.ServiceReference1.SytechService>, ConsoleApp1.ServiceReference1.SytechService {
         
-        public SytechClient() {
+        public SytechServiceClient() {
         }
         
-        public SytechClient(string endpointConfigurationName) : 
+        public SytechServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public SytechClient(string endpointConfigurationName, string remoteAddress) : 
+        public SytechServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SytechClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SytechServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public SytechClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public SytechServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        public ConsoleApp1.ServiceReference1.IdeaPOCO[] GetIdeas() {
-            return base.Channel.GetIdeas();
-        }
-        
-        public System.Threading.Tasks.Task<ConsoleApp1.ServiceReference1.IdeaPOCO[]> GetIdeasAsync() {
-            return base.Channel.GetIdeasAsync();
-        }
-        
-        public void SaveIdea(string ideaText, string personId) {
-            base.Channel.SaveIdea(ideaText, personId);
-        }
-        
-        public System.Threading.Tasks.Task SaveIdeaAsync(string ideaText, string personId) {
-            return base.Channel.SaveIdeaAsync(ideaText, personId);
         }
         
         public ConsoleApp1.ServiceReference1.PeoplePOCO[] GetPeople() {
@@ -223,6 +201,14 @@ namespace ConsoleApp1.ServiceReference1 {
         
         public System.Threading.Tasks.Task<ConsoleApp1.ServiceReference1.PeoplePOCO[]> GetPeopleAsync() {
             return base.Channel.GetPeopleAsync();
+        }
+        
+        public ConsoleApp1.ServiceReference1.IdeaPOCO[] GetIdeas() {
+            return base.Channel.GetIdeas();
+        }
+        
+        public System.Threading.Tasks.Task<ConsoleApp1.ServiceReference1.IdeaPOCO[]> GetIdeasAsync() {
+            return base.Channel.GetIdeasAsync();
         }
     }
 }

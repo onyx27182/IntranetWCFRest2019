@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace WCFREST.Data
@@ -33,35 +34,46 @@ namespace WCFREST.Data
             using (DB_125405_joeEntities context = new DB_125405_joeEntities())
             {
 
-                foreach(var ideaObj in context.Ideas )
+                foreach(var ideaObj in context.Ideas)
                 {
      
-                    IdeaPOCO idea = new IdeaPOCO {  IdeaText = ideaObj.Text};
-                    if( ideaObj.person != null )
-                    {
-                        idea.Name = ideaObj.person.FirstName;
-                        idea.NameId = ideaObj.FK_People_Id;
-                    }
+                    IdeaPOCO idea = new IdeaPOCO {  Text = ideaObj.Text, Id=ideaObj.Id };
                     ideas.Add(idea);
                 }
 
             }
-           return ideas;
+            ideas.Reverse();
+            return ideas;
         }
 
-        public static void SaveIdea(string text, int personId)
+        public static string SaveIdea(string text)
         {
-            using (DB_125405_joeEntities context = new DB_125405_joeEntities())
-            {
-                Idea idea = new Idea { Text = text };
-                if ( personId != -1)
-                {
-                    idea.FK_People_Id = personId;
-                }
 
-                context.Ideas.Add(idea);
-                context.SaveChanges();
+            string err = null;
+            try
+            {
+                using (DB_125405_joeEntities context = new DB_125405_joeEntities())
+                {
+                    var existingIdea = context.Ideas.Where(x => x.Text.Trim().Replace(" ", "").ToUpper().Trim() ==
+                                                            text.Trim().Replace(" ", "").ToUpper().Trim()).FirstOrDefault();
+                    if (existingIdea != null)
+                    {
+                        throw new Exception("idea already exists ");
+                    }
+                    Idea idea = new Idea { Text = text };
+                    context.Ideas.Add(idea);
+                    context.SaveChanges();
+                }
             }
+            catch(Exception ex)
+            {
+                err = ex.Message;
+                if(  (ex.InnerException != null ) && (!string.IsNullOrEmpty(ex.InnerException.Message)))
+                {
+                    err += ex.InnerException.Message;
+                }
+            }
+            return err;
         }
     }
 }

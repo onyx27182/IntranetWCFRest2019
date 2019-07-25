@@ -30,20 +30,17 @@ namespace WCFREST
             set { _firstName = value; }
         }
     }
-}
 
-
-// Use a data contract as illustrated in the sample below to add composite types to service operations.
-[DataContract]
+    [DataContract]
     public class IdeaPOCO
     {
 
-        int _nameId;
+        int _id;
         [DataMember]
-        public int NameId
+        public int Id
         {
-            get { return _nameId; }
-            set { _nameId = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
         string _name;
@@ -54,12 +51,16 @@ namespace WCFREST
             set { _name = value; }
         }
 
-        string _ideaText;
+        string _text;
         [DataMember]
-        public string IdeaText
+        public string Text
         {
-            get { return _ideaText; }
-            set { _ideaText = value; }
+            get { return _text; }
+            set { _text = value; }
         }
+
     }
+}
+
+
 

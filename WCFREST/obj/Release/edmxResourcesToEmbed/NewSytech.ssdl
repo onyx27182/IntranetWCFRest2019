@@ -6,7 +6,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Text" Type="varchar(max)" />
-    <Property Name="FK_People_Id" Type="int" Nullable="false" />
+    <Property Name="FK_People_Id" Type="int" />
   </EntityType>
   <EntityType Name="people">
     <Key>
@@ -17,7 +17,7 @@
     <Property Name="LastName" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <Association Name="FK_Ideas_people">
-    <End Role="people" Type="Self.people" Multiplicity="1" />
+    <End Role="people" Type="Self.people" Multiplicity="0..1" />
     <End Role="Ideas" Type="Self.Ideas" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="people">
